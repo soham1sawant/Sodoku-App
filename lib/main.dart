@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:sodoku_app/data/repository/puzzle_repository.dart';
 
 void main() {
-  runApp(App());
+  final PuzzleRepository puzzleRepository = PuzzleRepository();
+  runApp(App(puzzleRepository: puzzleRepository,));
 }
 
 class App extends StatelessWidget {
-  const App({ Key? key }) : super(key: key);
+  final PuzzleRepository puzzleRepository;
+
+  const App({Key? key, required this.puzzleRepository}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
-    );
+    return Container();
   }
 }
